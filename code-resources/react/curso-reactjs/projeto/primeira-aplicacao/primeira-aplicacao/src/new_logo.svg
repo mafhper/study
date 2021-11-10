@@ -1,0 +1,3 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64 124c33.137 0 60-26.863 60-60S97.137 4 64 4 4 30.863 4 64s26.863 60 60 60zM48 32l16 24 16-24h16v64H68V72h12v-8H48v8h12v24H32V32h16z" fill="#FFF" fill-rule="evenodd"/>
+</svg>
