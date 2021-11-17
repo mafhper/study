@@ -1,6 +1,6 @@
 # `Hello World!`
 
-## :computer: Dia 01 - Notas da Palesta
+## :computer: Dia 01 - Notas da Aula
 
 &nbsp;
 
@@ -56,13 +56,11 @@ npm start
 
 Aqui começa a aula de fato:
 
-
-
 [1] Conhecendo a estrutura de arquivos
 
 [2] Modificando App.js, Index.js       
 
-[3] Deletando tudo e començando outra vez.
+[3] Deletando tudo e começando outra vez.
 
 [4] Conhecendo o `ReactDOM.render`
 
@@ -71,6 +69,5 @@ Aqui começa a aula de fato:
 [6] Criando  algumas `function`
 
 [6] Manipulando `props.titulo`
-
 
 ...em breve mais conteúdo...
