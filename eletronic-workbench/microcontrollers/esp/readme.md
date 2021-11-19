@@ -1,3 +1,3 @@
 # `Hello World!`
 
-## :computer: Agregador de tópicos para microntroladores ESP (Espressif)\.
+## :computer: Agregador de tópicos de microntroladores ESP (Espressif)\.
