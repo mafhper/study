@@ -1,3 +1,3 @@
 # `Hello World!`
 
-## :computer: Agregador de tópicos webservices\.
+## :computer: Agregador de tópicos de estudos\.
