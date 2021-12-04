@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel watch src/index.html src/index.js",
-    "build": "parcel build src/index.html src/index.js"
+    "dev": "parcel src/index.html src/js/main.js",
+    "build": "parcel build src/index.html src/js/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "parcel-bundler": "^1.9.4",
     "sass": "^1.44.0"
   }
 }

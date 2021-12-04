@@ -150,6 +150,10 @@ h1 {
   font-weight: 100;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 p {
   max-inline-size: 35ch;
   font-size: 1.25rem;

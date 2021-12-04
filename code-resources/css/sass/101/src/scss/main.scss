@@ -1,5 +1,5 @@
 /* Separar para _color.scss depois */
-$brand-color: hsl(7, 100%, 52%);
+$brand-color: #ff270a;
 $brand-hue: 7;
 $brand-saturation: 100%;
 $brand-lightness: 52%;
@@ -162,6 +162,10 @@ section {
 
 h1 {
   font-weight: 100;
+}
+
+.title{
+  text-transform: uppercase;
 }
 
 p {
