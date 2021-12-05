@@ -23,11 +23,8 @@
   saturation.style.setProperty('--brand-saturation', color.s + '%');
   lightness.style.setProperty('--brand-lightness', color.l + '%');
   brand.style.setProperty('--brand-color', input.value);
-  console.log('hsl(' + color.h + ', ' + color.s + '%, ' + color.l + '%)');
-  console.log('h: ' + color.h);
-  console.log('s: ' + color.s);
-  console.log('l: ' + color.l);
-  console.log('hex: ' + input.value);
+  document.querySelector('#hex-name').innerHTML = 'HEX: ' + input.value;
+  document.querySelector('#hsl-name').innerHTML = 'HSL (' + color.h + '°, ' + color.s + '%, ' + color.l + '%)';
 }
 
 function HexToHSL(hex) {
@@ -79,60 +76,90 @@ function HexToHSL(hex) {
 <script src="/main.77bb5cfd.js"></script></head>
 
 <body>
-
   <header>
-    <h1 class="title">Scheme</h1>
-    <input type="color" name="theme" id="usr-clr" onChange="getColor()">
-    <form id="theme-switcher">
-      <div>
-        <input checked="" type="radio" id="auto" name="theme" value="auto">
-        <label for="auto">Auto</label>
-      </div>
-      <div>
-        <input type="radio" id="light" name="theme" value="light">
-        <label for="light">Light</label>
-      </div>
-      <div>
-        <input type="radio" id="dark" name="theme" value="dark">
-        <label for="dark">Dark</label>
-      </div>
-      <div>
-        <input type="radio" id="dim" name="theme" value="dim">
-        <label for="dim">Dim</label>
-      </div>
-    </form>
+    <nav id="theme-switcher">
+      <ul>
+        <li>
+          <label for="auto">Auto</label>
+          <input checked="" type="radio" id="auto" name="theme" value="auto">
+        </li>
+        <li>
+          <input type="radio" id="light" name="theme" value="light">
+          <label for="light">Light</label>
+        </li>
+        <li>
+          <input type="radio" id="dark" name="theme" value="dark">
+          <label for="dark">Dark</label>
+        </li>
+        <li>
+          <input type="radio" id="dim" name="theme" value="dim">
+          <label for="dim">Dim</label>
+        </li>
+      </ul>
+    </nav>
   </header>
-
   <main>
     <section>
-      <div class="surface-samples">
-        <div class="surface1 rad-shadow">1</div>
-        <div class="surface2 rad-shadow">2</div>
-        <div class="surface3 rad-shadow">3</div>
-        <div class="surface4 rad-shadow">4</div>
-      </div>
-    </section>
+      <ul class="surface-samples">
+        <li class="surface surface1 rad-shadow">
+          <h3>Hello</h3>
+          <p>Lorem ipsum dolor sit</p>
+        </li>
+        <li class="surface surface2 rad-shadow">
+          <h3>Mundo</h3>
+          <p>Lorem ipsum dolor sit</p>
+        </li>
+        <li class="surface surface3 rad-shadow">
+          <h3>Olá</h3>
+          <p>Lorem, ipsum dolor sit</p>
+        </li>
+        <li class="surface surface4 rad-shadow">
+          <h3>World</h3>
+          <p>Lorem ipsum dolor sit</p>
+        </li>
+      </ul>
 
+    </section>
     <section>
       <div class="text-samples">
-        <h1 class="text1">
-          <span class="swatch brand rad-shadow"></span>
-          Brand
-        </h1>
-        <h1 class="text1">
-          <span class="swatch text1 rad-shadow"></span>
-          Text Color 1
-        </h1>
-        <h1 class="text2">
-          <span class="swatch text2 rad-shadow"></span>
-          Text Color 2
-        </h1>
-        <br>
-        <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.</p>
-        <p class="text2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.</p>
+        <div>
+          <input type="color" name="theme" id="usr-clr" onChange="getColor()" value="#000">
+          <h1 class="title">Cor Padrão do Tema</h1>
+        </div>
+        <div>
+          <aside id="hex-name"></aside>
+          <aside id="hsl-name"></aside>
+        </div>
       </div>
+      <div>
+        <div>
+          <h1 id="text-brand">
+            <span class="swatch brand"></span>
+            Aproximação
+          </h1>
+        </div>
+        <div>
+          <h1 class="text1">
+            <span class="swatch text1"></span>
+            Exemplo de Texto 1
+          </h1>
+          <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti laboriosam, iure modi
+            odit, autem dicta voluptatem labore laborum possimus rerum esse hic! A suscipit debitis saepe soluta unde
+            dicta!</p>
+        </div>
+        <br>
+        <div>
+          <h1 class="text2">
+            <span class="swatch text2"></span>
+            Exemplo de Texto 2
+          </h1>
+
+          <p class="text2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vitae maiores nam
+            accusantium, eaque accusamus minima eos iusto facere soluta, assumenda rerum fuga perspiciatis, ea unde
+            consequuntur dolorum exercitationem magni.</p>
+        </div>
+      </div>
+      
     </section>
   </main>
 </body>

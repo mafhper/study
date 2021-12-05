@@ -126,14 +126,7 @@ switcher.addEventListener('input', function (e) {
 
 var setTheme = function setTheme(theme) {
   return doc.setAttribute('color-scheme', theme);
-}; // const colorPicker = document.querySelector('#input-color');
-// const elems = document.querySelectorAll('.title');
-// var root = document.querySelector('*');
-// colorPicker.addEventListener('change', function () {
-//     root.style.setProperty('--brand-color', this.value);
-//     Array.from(elems).forEach(v => v.style.color = this.value);
-//     console.log('Color Picker: ' + this.value);
-// });
+};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -162,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61402" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56373" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

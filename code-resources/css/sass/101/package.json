@@ -8,7 +8,7 @@
     "build": "parcel build src/index.html src/js/main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "@mafhper",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.9.4",
