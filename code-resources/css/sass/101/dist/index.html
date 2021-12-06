@@ -11,9 +11,8 @@
   <title>Hello World!</title>
   <link rel="stylesheet" href="/main.77bb5cfd.css">
   <script type="module" src="/js\main.js"></script>
-
   <script>function getColor() {
-  var input = document.querySelector('#usr-clr');
+  var input = document.querySelector('input[type=color]');
   var color = HexToHSL(input.value);
   var hue = document.querySelector('*');
   var saturation = document.querySelector('*');
@@ -73,6 +72,7 @@ function HexToHSL(hex) {
     l: l
   };
 }</script>
+
 <script src="/main.77bb5cfd.js"></script></head>
 
 <body>
@@ -80,8 +80,9 @@ function HexToHSL(hex) {
     <nav id="theme-switcher">
       <ul>
         <li>
-          <label for="auto">Auto</label>
           <input checked="" type="radio" id="auto" name="theme" value="auto">
+          <label for="auto">Auto</label>
+
         </li>
         <li>
           <input type="radio" id="light" name="theme" value="light">
@@ -99,36 +100,37 @@ function HexToHSL(hex) {
     </nav>
   </header>
   <main>
-    <section>
-      <ul class="surface-samples">
-        <li class="surface surface1 rad-shadow">
-          <h3>Hello</h3>
-          <p>Lorem ipsum dolor sit</p>
-        </li>
-        <li class="surface surface2 rad-shadow">
-          <h3>Mundo</h3>
-          <p>Lorem ipsum dolor sit</p>
-        </li>
-        <li class="surface surface3 rad-shadow">
-          <h3>Olá</h3>
-          <p>Lorem, ipsum dolor sit</p>
-        </li>
-        <li class="surface surface4 rad-shadow">
-          <h3>World</h3>
-          <p>Lorem ipsum dolor sit</p>
-        </li>
-      </ul>
 
-    </section>
-    <section>
+    <div class="container">
+      <div class="surface-samples hero defaults">
+        <div class="surface surface4 rad-shadow hero-content">
+          <h1>Hello!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dignissimos! Neque sit consequuntur est obcaecati laboriosam omnis quaerat cum, excepturi ut. Voluptatum voluptatem id nulla temporibus officia, voluptates sapiente ipsum.</p>
+        </div>
+        <div class="surface surface3 rad-shadow hero-content">
+          <h1>Mundo!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dignissimos! Neque sit consequuntur est obcaecati laboriosam omnis quaerat cum, excepturi ut. Voluptatum voluptatem id nulla temporibus officia, voluptates sapiente ipsum.</p>
+        </div>
+        <div class="surface surface2 rad-shadow hero-content">
+          <h1>Olá!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dignissimos! Neque sit consequuntur est obcaecati laboriosam omnis quaerat cum, excepturi ut. Voluptatum voluptatem id nulla temporibus officia, voluptates sapiente ipsum.</p>
+        </div>
+        <div class="surface surface1 rad-shadow hero-content">
+          <h1>World!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dignissimos! Neque sit consequuntur est obcaecati laboriosam omnis quaerat cum, excepturi ut. Voluptatum voluptatem id nulla temporibus officia, voluptates sapiente ipsum.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
       <div class="text-samples">
         <div>
-          <input type="color" name="theme" id="usr-clr" onChange="getColor()" value="#000">
+          <input type="color" name="theme" id="usr-clr" onChange="getColor()" value="#000000">
           <h1 class="title">Cor Padrão do Tema</h1>
         </div>
         <div>
-          <aside id="hex-name"></aside>
-          <aside id="hsl-name"></aside>
+          <div id="hex-name"></div>
+          <div id="hsl-name"></div>
         </div>
       </div>
       <div>
@@ -143,7 +145,8 @@ function HexToHSL(hex) {
             <span class="swatch text1"></span>
             Exemplo de Texto 1
           </h1>
-          <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti laboriosam, iure modi
+          <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti laboriosam, iure
+            modi
             odit, autem dicta voluptatem labore laborum possimus rerum esse hic! A suscipit debitis saepe soluta unde
             dicta!</p>
         </div>
@@ -159,9 +162,10 @@ function HexToHSL(hex) {
             consequuntur dolorum exercitationem magni.</p>
         </div>
       </div>
-      
-    </section>
+    </div>
+    
   </main>
+
 </body>
 
 </html>

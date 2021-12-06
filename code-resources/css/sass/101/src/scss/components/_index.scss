@@ -1,3 +1,6 @@
+@forward '../components/root';
+@forward '../components/lists';
+@forward '../components/inputs';
 // @forward '../components/grid';
 // @forward '../components/header';
 // @forward '../components/footer';
@@ -9,10 +12,11 @@
 // @forward '../components/select';
 // @forward '../components/checkbox';
 // @forward '../components/radio';
-// @forward '../components/label';
+@forward '../components/label';
 // @forward '../components/form';
 // @forward '../components/table';
 // @forward '../components/tabs';
 // @forward '../components/tab';
 // @forward '../components/modal';
 // @forward '../components/breakpoint';
+@forward '../components/containers';

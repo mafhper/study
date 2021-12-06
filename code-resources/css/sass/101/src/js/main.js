@@ -1,3 +1,5 @@
+/* Mudança de Tema */
+
 const switcher = document.querySelector('#theme-switcher')
       const doc = document.firstElementChild
 
@@ -6,3 +8,15 @@ const switcher = document.querySelector('#theme-switcher')
 
       const setTheme = theme =>
         doc.setAttribute('color-scheme', theme)
+
+/* Captura da cor selecionada e Modificação de Componentes */
+
+/* const colorInput = document.querySelector('input[type=color]')
+const colorVariable = '--brand-color'
+
+colorInput.addEventListener('change', e =>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty(colorVariable, e.target.value)
+})
+ */
+

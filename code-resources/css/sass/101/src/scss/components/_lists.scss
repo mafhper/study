@@ -1,0 +1,28 @@
+/* =================================================================
+ * Definições globais de listas
+ * ================================================================= 
+ * 
+ */
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+// ul>li::after {
+//     content: "x";
+//     display: inline-block;
+//     background-color: var(--brand);
+// }
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 3em;
+}

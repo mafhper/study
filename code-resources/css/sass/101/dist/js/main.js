@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
+/* Mudança de Tema */
 var switcher = document.querySelector('#theme-switcher');
 var doc = document.firstElementChild;
 switcher.addEventListener('input', function (e) {
@@ -127,6 +128,16 @@ switcher.addEventListener('input', function (e) {
 var setTheme = function setTheme(theme) {
   return doc.setAttribute('color-scheme', theme);
 };
+/* Captura da cor selecionada e Modificação de Componentes */
+
+/* const colorInput = document.querySelector('input[type=color]')
+const colorVariable = '--brand-color'
+
+colorInput.addEventListener('change', e =>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty(colorVariable, e.target.value)
+})
+ */
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -155,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56373" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55061" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

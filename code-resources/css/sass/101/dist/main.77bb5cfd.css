@@ -1,12 +1,14 @@
 @charset "UTF-8";
-/*!
+/* ================================================================= 
  * ress.css • v4.0.0
  * MIT License
  * github.com/filipelinhares/ress
+ * =================================================================
+ *
+ * Global selectors
+ * ================================================================= 
+ * 
  */
-/* # =================================================================
-   # Global selectors
-   # ================================================================= */
 html {
   block-size: 100%;
   box-sizing: border-box;
@@ -22,7 +24,7 @@ html {
 ::after {
   background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 ::before,
@@ -38,9 +40,23 @@ html {
   margin: 0;
 }
 
-/* # =================================================================
-   # General elements
-   # ================================================================= */
+textarea,
+input {
+  font: inherit;
+}
+
+button,
+select,
+textarea,
+input {
+  font-size: max(16px, 1em);
+}
+
+/* =================================================================  
+ * General elements
+ * ================================================================= 
+ * 
+ */
 hr {
   overflow: visible;
   /* Show the overflow in Edge and IE */
@@ -133,9 +149,11 @@ table {
   /* Remove text indentation in Chrome, Edge, and Safari */
 }
 
-/* # =================================================================
-   # Forms
-   # ================================================================= */
+/* =================================================================  
+ * Forms
+ * ================================================================= 
+ * 
+ */
 input {
   border-radius: 0;
 }
@@ -288,9 +306,11 @@ legend {
   /* Change font properties to `inherit` in Chrome and Safari */
 }
 
-/* # =================================================================
-   # Specify media element style
-   # ================================================================= */
+/* =================================================================
+ * Specify media element style
+ * ================================================================= 
+ * 
+ */
 img {
   border-style: none;
   /* Remove border when inside `a` element in IE 8/9/10 */
@@ -301,9 +321,11 @@ progress {
   vertical-align: baseline;
 }
 
-/* # =================================================================
-   # Accessibility
-   # ================================================================= */
+/* =================================================================  
+ * Accessibility
+ * ================================================================= 
+ * 
+ */
 /* Specify the progress cursor of updating elements */
 [aria-busy=true] {
   cursor: progress;
@@ -319,11 +341,20 @@ progress {
   cursor: default;
 }
 
+/* =================================================================
+ * Definições globais de cores
+ * ================================================================= 
+ * 
+ */
+/* Variáveis de cores padrão */
+/* Definições das regras de cores */
 * {
+  /* Brand Default Color */
   --brand-color: #ff270a;
   --brand-hue: 7;
   --brand-saturation: 100%;
   --brand-lightness: 52%;
+  /* Brand Light Color */
   --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
   --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
   --text2-light: hsl(var(--brand-hue) 30% 30%);
@@ -333,6 +364,7 @@ progress {
   --surface4-light: hsl(var(--brand-hue) 20% 85%);
   --surface-shadow-light: var(--brand-hue) 10% 20%;
   --shadow-strength-light: 0.02;
+  /* Brand Dark Color */
   --brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) / 2) calc(var(--brand-lightness) / 1.5));
   --text1-dark: hsl(var(--brand-hue) 15% 85%);
   --text2-dark: hsl(var(--brand-hue) 5% 65%);
@@ -342,6 +374,7 @@ progress {
   --surface4-dark: hsl(var(--brand-hue) 5% 25%);
   --surface-shadow-dark: var(--brand-hue) 50% 3%;
   --shadow-strength-dark: 0.8;
+  /* Brand Dim Color */
   --brand-dim: hsl(var(--brand-hue) calc(var(--brand-saturation) / 1.25) calc(var(--brand-lightness) / 1.25));
   --text1-dim: hsl(var(--brand-hue) 15% 75%);
   --text2-dim: hsl(var(--brand-hue) 10% 61%);
@@ -353,6 +386,7 @@ progress {
   --shadow-strength-dim: 0.2;
 }
 
+/* Definições de cores para o tema inicial */
 :root {
   color-scheme: light;
   --brand: var(--brand-light);
@@ -366,7 +400,13 @@ progress {
   --shadow-strength: var(--shadow-strength-light);
 }
 
+/* 
+/  O prefers-color-scheme CSS media feature é usado para detectar se 
+/  o usuário solicitou que o sistema use um tema de cores claras ou escuras. 
+/
+*/
 @media (prefers-color-scheme: dark) {
+  /* Definições de cores para o tema escuro no root */
   :root {
     color-scheme: dark;
     --brand: var(--brand-dark);
@@ -380,6 +420,7 @@ progress {
     --shadow-strength: var(--shadow-strength-dark);
   }
 }
+/* Mapa de cores para o tema claro */
 [color-scheme=light] {
   color-scheme: light;
   --brand: var(--brand-light);
@@ -393,6 +434,7 @@ progress {
   --shadow-strength: var(--shadow-strength-light);
 }
 
+/* Mapa de cores para o tema escuro */
 [color-scheme=dark] {
   color-scheme: dark;
   --brand: var(--brand-dark);
@@ -406,6 +448,7 @@ progress {
   --shadow-strength: var(--shadow-strength-dark);
 }
 
+/* Mapa de cores para o tema dim */
 [color-scheme=dim] {
   color-scheme: dark;
   --brand: var(--brand-dim);
@@ -419,6 +462,214 @@ progress {
   --shadow-strength: var(--shadow-strength-dim);
 }
 
+/* =================================================================
+ * Definições globais de sombras
+ * ================================================================= 
+ * 
+ */
+div .surface:hover,
+div .surface:focus {
+  border: 1px solid hsl(var(--brand-hue), 10%, 50%, 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 6.7px 5.3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.01)), 0 12.5px 10px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 22.3px 17.9px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 41.8px 33.4px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 100px 80px hsl(var(--surface-shadow)/var(--shadow-strength));
+  transition: ease-in-out 0.2s;
+}
+
+.rad-shadow {
+  border: 1px solid hsl(var(--brand-hue), 10%, 80%, 80%);
+  box-shadow: 0 2rem 1.5rem 1.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.9)), 0 6.7px 5.3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.1)), 0 100px 80px hsl(var(--surface-shadow)/var(--shadow-strength));
+  transition: ease-in-out 0.2s;
+}
+
+/* =================================================================
+ * Definições de Fontes
+ * ================================================================= 
+ * 
+ */
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+h3, .h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+}
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --neon: hsl(317, 100%, 54%);
+  --neon-bg: hsl(323, 21%, 16%);
+  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+/* =================================================================
+ * Definições globais de listas
+ * ================================================================= 
+ * 
+ */
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 3em;
+}
+
+/* =================================================================
+ * Definições Personalizadas de Campos de Entrada
+ * ================================================================= 
+ * 
+ */
+input[type=color] {
+  -webkit-appearance: none;
+  outline: 5px solid var(--surface2);
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+
+input[type=radio] {
+  background-color: var(--surface4);
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 5px hsla(0, 0%, 100%, 0.8), 0 0 0 1px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 2px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 4px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.4)), 0 6px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2)), 0 10px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2));
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin-right: 15px;
+  position: relative;
+  width: 15px;
+  -webkit-appearance: none;
+}
+
+input[type=radio]:after {
+  background-color: var(--surface2);
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8);
+  content: "";
+  display: block;
+  height: 7px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 7px;
+}
+
+input[type=radio]:checked:after {
+  background-color: #f66;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.5), inset 0 2px 2px hsla(0, 0%, 100%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8), 0 0 2px 2px hsla(0, 70%, 70%, 0.4);
+}
+
+/* =================================================================
+ * Definições Personalizadas de Label
+ * ================================================================= 
+ * 
+ */
+label {
+  padding: 2rem;
+}
+
+/* =================================================================
+ * Definições para Containers
+ * ================================================================= 
+ * 
+ */
+.container {
+  padding: 2rem 1rem 4rem 1rem;
+}
+
+/* =================================================================
+ * Definições Customizadas
+ * ================================================================= 
+ * 
+ */
 html {
   background-color: var(--surface1);
   color: var(--text1);
@@ -426,19 +677,11 @@ html {
 
 body {
   min-block-size: 100%;
-  font-family: system-ui, sans-serif;
-  padding: 5vmax;
+  font-family: var(--font-sans-serif);
+  padding: 1rem;
   display: grid;
   place-content: center;
-  gap: 5vmax;
-}
-
-main {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-  gap: 10vmax 10vmin;
+  gap: 1rem;
 }
 
 h1 {
@@ -465,26 +708,6 @@ form > div {
   display: inline-flex;
   align-items: center;
   gap: 0.75ch;
-}
-
-ul {
-  display: grid;
-  gap: 1ch;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: grid;
-  gap: 1ch;
-  list-style: none;
-  padding: 0;
-}
-
-ul > li::after {
-  content: "";
-  display: inline-block;
-  background-color: var(--brand);
 }
 
 aside {
@@ -519,13 +742,12 @@ input[type=color]::-webkit-color-swatch {
 }
 
 .surface-samples {
-  --size: 20ch;
+  --size: 25%;
   display: grid;
-  grid-template-columns: var(--size) var(--size);
-  gap: 2ch;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3ch;
   font-weight: 300;
   align-content: center;
-  align-items: stretch;
 }
 @media (width <= 480px) {
   .surface-samples {
@@ -536,19 +758,19 @@ input[type=color]::-webkit-color-swatch {
   border-radius: 1rem;
   display: grid;
   place-content: center;
-  font-size: 3rem;
-  font-weight: 200;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .text-samples {
   display: grid;
-  gap: 1.5ch;
+  gap: 1.2rem;
 }
 .text-samples > h1 {
   font-size: 1.5rem;
   display: inline-flex;
   align-items: center;
-  gap: 1ch;
+  gap: 1vh;
 }
 
 .brand {
@@ -557,8 +779,8 @@ input[type=color]::-webkit-color-swatch {
 }
 
 .surface {
-  padding: auto;
-  outline: var(--brand) solid 1px;
+  padding: 1rem;
+  outline: var(--neon) solid 1px;
 }
 
 .surface1 {
@@ -609,10 +831,11 @@ input[type=color]::-webkit-color-swatch {
   background-color: var(--text2);
 }
 
-.rad-shadow {
-  border: 1px solid hsl(var(--brand-hue), 10%, 50%, 15%);
-  box-shadow: 0 1rem 0.5rem -0.5rem;
-  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 6.7px 5.3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.01)), 0 12.5px 10px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 22.3px 17.9px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 41.8px 33.4px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 100px 80px hsl(var(--surface-shadow)/var(--shadow-strength));
+#theme-switcher {
+  padding: 0.2rem;
+  background-color: var(--neon-bg);
+  border-radius: 2rem;
+  outline: var(--neon) solid 1px;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

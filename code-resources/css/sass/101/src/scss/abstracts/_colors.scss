@@ -1,18 +1,27 @@
-// Functions.scss
+/* =================================================================
+ * Definições globais de cores
+ * ================================================================= 
+ * 
+ */
 
-$brand-color: #ff270a;
-$brand-hue: 7;
-$brand-saturation: 100%;
-$brand-lightness: 52%;
+    /* Variáveis de cores padrão */
+
+    $brand-color: #ff270a;
+    $brand-hue: 7;
+    $brand-saturation: 100%;
+    $brand-lightness: 52%;
+
+/* Definições das regras de cores */
 
 * {
-    // Brand Default Color
+
+    /* Brand Default Color */
     --brand-color: #{$brand-color};
     --brand-hue: #{$brand-hue};
     --brand-saturation: #{$brand-saturation};
     --brand-lightness: #{$brand-lightness};
 
-    // Brand Light Color
+    /* Brand Light Color */
     --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
     --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
     --text2-light: hsl(var(--brand-hue) 30% 30%);
@@ -23,7 +32,7 @@ $brand-lightness: 52%;
     --surface-shadow-light: var(--brand-hue) 10% 20%;
     --shadow-strength-light: 0.02;
 
-    // Brand Dark Color
+    /* Brand Dark Color */
     --brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) / 2) calc(var(--brand-lightness) / 1.5));
     --text1-dark: hsl(var(--brand-hue) 15% 85%);
     --text2-dark: hsl(var(--brand-hue) 5% 65%);
@@ -34,7 +43,7 @@ $brand-lightness: 52%;
     --surface-shadow-dark: var(--brand-hue) 50% 3%;
     --shadow-strength-dark: 0.8;
 
-    // Brand Dim Color
+    /* Brand Dim Color */
     --brand-dim: hsl(var(--brand-hue) calc(var(--brand-saturation) / 1.25) calc(var(--brand-lightness) / 1.25));
     --text1-dim: hsl(var(--brand-hue) 15% 75%);
     --text2-dim: hsl(var(--brand-hue) 10% 61%);
@@ -45,6 +54,8 @@ $brand-lightness: 52%;
     --surface-shadow-dim: var(--brand-hue) 30% 13%;
     --shadow-strength-dim: 0.2;
 }
+
+/* Definições de cores para o tema inicial */
 
 :root {
     color-scheme: light;
@@ -59,7 +70,15 @@ $brand-lightness: 52%;
     --shadow-strength: var(--shadow-strength-light);
 }
 
+ /* 
+ /  O prefers-color-scheme CSS media feature é usado para detectar se 
+ /  o usuário solicitou que o sistema use um tema de cores claras ou escuras. 
+ /
+ */
+
 @media (prefers-color-scheme: dark) {
+
+    /* Definições de cores para o tema escuro no root */
     :root {
         color-scheme: dark;
         --brand: var(--brand-dark);
@@ -74,6 +93,7 @@ $brand-lightness: 52%;
     }
 }
 
+/* Mapa de cores para o tema claro */
 [color-scheme="light"] {
     color-scheme: light;
     --brand: var(--brand-light);
@@ -87,6 +107,7 @@ $brand-lightness: 52%;
     --shadow-strength: var(--shadow-strength-light);
 }
 
+/* Mapa de cores para o tema escuro */
 [color-scheme="dark"] {
     color-scheme: dark;
     --brand: var(--brand-dark);
@@ -100,6 +121,7 @@ $brand-lightness: 52%;
     --shadow-strength: var(--shadow-strength-dark);
 }
 
+/* Mapa de cores para o tema dim */
 [color-scheme="dim"] {
     color-scheme: dark;
     --brand: var(--brand-dim);
