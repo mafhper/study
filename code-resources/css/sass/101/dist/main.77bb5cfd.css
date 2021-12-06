@@ -833,7 +833,7 @@ input[type=color]::-webkit-color-swatch {
 
 #theme-switcher {
   padding: 0.2rem;
-  background-color: var(--neon-bg);
+  background-color: var(--surface4);
   border-radius: 2rem;
   outline: var(--neon) solid 1px;
 }
