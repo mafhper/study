@@ -10,119 +10,15 @@
 html {
   background-color: var(--surface1);
   color: var(--text1);
+  
 }
 
 body {
-  min-block-size: 100%;
   font-family: var(--font-sans-serif);
-  padding: 1rem;
-  display: grid;
-  place-content: center;
-  gap: 1rem;
-  // justify-items: center;
-}
-
-main {
-  // display: flex;
-  // flex-flow: row wrap;
-  // // align-items: center;
-  // align-content: center;
-  // justify-content: center;
-  // gap: 10vmax 10vmin;
-}
-
-
-h1 {
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-p {
-  max-inline-size: 35ch;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-header {
-  display: inline-grid;
-  gap: 1ch;
-}
-
-form {
-  display: flex;
-  gap: 2ch;
-
-  &>div {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75ch;
-  }
-}
-
-
-
-aside {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1ch;
-}
-
-input[type="color"] {
-  -webkit-appearance: none;
-  border: none;
-  aspect-ratio: 1 / 1;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-  border: none;
-}
-
-.title {
-  text-transform: uppercase;
-  display: grid;
-  gap: 1vh;
 }
 
 #text-brand {
   color: var(--brand);
-  text-transform: uppercase;
-}
-
-.surface-samples {
-  display: grid;
-  gap: 1ch;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  
-
-
-  @media (width <=480px) {
-    & {
-      --size: 40vw;
-    }
-  }
-
-  &>* {
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-}
-
-.text-samples {
-  display: grid;
-  gap: 1.2rem;
-
-  &>h1 {
-    font-size: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 1vh;
-  }
 }
 
 .brand {
@@ -130,15 +26,9 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--brand);
 }
 
-.surface {
-  padding: 1rem;
-  outline: var(--neon) solid 1px;
-}
-
 .surface1 {
   background-color: var(--surface1);
   color: var(--text2);
-  aspect-ratio: 1 / 2;
 }
 
 .surface2 {
@@ -149,7 +39,6 @@ input[type="color"]::-webkit-color-swatch {
 .surface3 {
   background-color: var(--surface3);
   color: var(--text1);
-  aspect-ratio: 1 / 2;
 }
 
 .surface4 {
@@ -159,34 +48,8 @@ input[type="color"]::-webkit-color-swatch {
 
 .text1 {
   color: var(--text1);
-
-  @nest p& {
-    font-weight: 200;
-  }
 }
 
 .text2 {
   color: var(--text2);
-}
-
-.swatch {
-  display: inline-block;
-  flex-shrink: 0;
-  inline-size: 1.5ch;
-  block-size: 1.5ch;
-
-  &.text1 {
-    background-color: var(--text1);
-  }
-
-  &.text2 {
-    background-color: var(--text2);
-  }
-}
-
-#theme-switcher{
-  padding: 0.2rem;
-  background-color: var(--surface4);
-  border-radius: 2rem;
-  outline: var(--neon) solid 1px;
 }

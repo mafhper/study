@@ -1,0 +1,18 @@
+{
+  "name": "103",
+  "version": "1.0.0",
+  "description": "1. Clone the repo\r 2. In your terminal, run `npm install`\r 3. In your terminal, run `npm run dev`",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html src/js/main.js",
+    "build": "parcel build src/index.html src/js/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1",
+    "sass": "^1.44.0"
+  }
+}

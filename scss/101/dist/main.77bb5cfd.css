@@ -488,59 +488,53 @@ div .surface:focus {
  * 
  */
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  --margin: 1.25rem;
+  --padding: 0.125rem;
+  margin: var(--margin);
+  padding: var(--padding);
+  font-weight: 400;
   line-height: 1.2;
+  text-transform: uppercase;
+  width: max-content;
+  position: relative;
+  background-color: var(--blue);
+}
+h6::after, .h6::after, h5::after, .h5::after, h4::after, .h4::after, h3::after, .h3::after, h2::after, .h2::after, h1::after, .h1::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--text1);
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: clamp(1.375rem, 1vw + 1rem, 2.5rem);
 }
 
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
-}
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: clamp(1.375rem, 1vw + 1rem, 2rem);
 }
 
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
-}
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
 }
 
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
-}
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
 }
 
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
-}
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.375rem);
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw + 1rem, 1.25rem);
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  font-size: clamp(1rem, 1vw + 1rem, 1.125rem);
 }
 
 :root {
@@ -680,97 +674,11 @@ html {
 }
 
 body {
-  min-block-size: 100%;
   font-family: var(--font-sans-serif);
-  padding: 1rem;
-  display: grid;
-  place-content: center;
-  gap: 1rem;
-}
-
-h1 {
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-p {
-  max-inline-size: 35ch;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-header {
-  display: inline-grid;
-  gap: 1ch;
-}
-
-form {
-  display: flex;
-  gap: 2ch;
-}
-form > div {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75ch;
-}
-
-aside {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1ch;
-}
-
-input[type=color] {
-  -webkit-appearance: none;
-  border: none;
-  aspect-ratio: 1/1;
-}
-
-input[type=color]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-input[type=color]::-webkit-color-swatch {
-  border: none;
-}
-
-.title {
-  text-transform: uppercase;
-  display: grid;
-  gap: 1vh;
 }
 
 #text-brand {
   color: var(--brand);
-  text-transform: uppercase;
-}
-
-.surface-samples {
-  display: grid;
-  gap: 1ch;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-}
-@media (width <= 480px) {
-  .surface-samples {
-    --size: 40vw;
-  }
-}
-.surface-samples > * {
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.text-samples {
-  display: grid;
-  gap: 1.2rem;
-}
-.text-samples > h1 {
-  font-size: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 1vh;
 }
 
 .brand {
@@ -778,15 +686,9 @@ input[type=color]::-webkit-color-swatch {
   background-color: var(--brand);
 }
 
-.surface {
-  padding: 1rem;
-  outline: var(--neon) solid 1px;
-}
-
 .surface1 {
   background-color: var(--surface1);
   color: var(--text2);
-  aspect-ratio: 1/2;
 }
 
 .surface2 {
@@ -797,7 +699,6 @@ input[type=color]::-webkit-color-swatch {
 .surface3 {
   background-color: var(--surface3);
   color: var(--text1);
-  aspect-ratio: 1/2;
 }
 
 .surface4 {
@@ -808,34 +709,9 @@ input[type=color]::-webkit-color-swatch {
 .text1 {
   color: var(--text1);
 }
-@nest p& {
-  .text1 {
-    font-weight: 200;
-  }
-}
 
 .text2 {
   color: var(--text2);
-}
-
-.swatch {
-  display: inline-block;
-  flex-shrink: 0;
-  inline-size: 1.5ch;
-  block-size: 1.5ch;
-}
-.swatch.text1 {
-  background-color: var(--text1);
-}
-.swatch.text2 {
-  background-color: var(--text2);
-}
-
-#theme-switcher {
-  padding: 0.2rem;
-  background-color: var(--surface4);
-  border-radius: 2rem;
-  outline: var(--neon) solid 1px;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
