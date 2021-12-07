@@ -600,6 +600,10 @@ nav li {
  * ================================================================= 
  * 
  */
+input {
+  /* accent-color: var(--yellow); */
+}
+
 input[type=color] {
   -webkit-appearance: none;
   outline: 5px solid var(--surface2);
@@ -617,7 +621,7 @@ input[type=color]::-webkit-color-swatch {
 }
 
 input[type=radio] {
-  background-color: var(--surface4);
+  background-color: var(--surface1);
   border-radius: 1rem;
   box-shadow: inset 0 1px 5px hsla(0, 0%, 100%, 0.8), 0 0 0 1px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 2px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 4px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.4)), 0 6px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2)), 0 10px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2));
   cursor: pointer;
@@ -630,7 +634,7 @@ input[type=radio] {
 }
 
 input[type=radio]:after {
-  background-color: var(--surface2);
+  background-color: var(--dark);
   border-radius: 25px;
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8);
   content: "";
@@ -643,7 +647,7 @@ input[type=radio]:after {
 }
 
 input[type=radio]:checked:after {
-  background-color: #f66;
+  background-color: var(--light);
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.5), inset 0 2px 2px hsla(0, 0%, 100%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8), 0 0 2px 2px hsla(0, 70%, 70%, 0.4);
 }
 
