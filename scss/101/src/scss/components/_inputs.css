@@ -4,6 +4,10 @@
  * 
  */
 
+input {
+        /* accent-color: var(--yellow); */
+}
+
 input[type="color"] {
         -webkit-appearance: none;
         outline: 5px solid var(--surface2);
@@ -19,7 +23,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 input[type="radio"] {
-    background-color: var(--surface4);
+    background-color: var(--surface1);
     border-radius: 1rem;
     box-shadow: inset 0 1px 5px hsla(0,0%,100%,.8),
                 0 0 0 1px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.6)),
@@ -36,7 +40,7 @@ input[type="radio"] {
     -webkit-appearance: none;
 }
 input[type="radio"]:after {
-    background-color: var(--surface2);
+    background-color: var(--dark);
     border-radius: 25px;
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
                 0 1px 1px hsla(0,0%,100%,.8);
@@ -49,7 +53,7 @@ input[type="radio"]:after {
     width: 7px;
 }
 input[type="radio"]:checked:after {
-    background-color: #f66;
+    background-color: var(--light);
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.5),
                 inset 0 2px 2px hsla(0,0%,100%,.4),
                 0 1px 1px hsla(0,0%,100%,.8),
