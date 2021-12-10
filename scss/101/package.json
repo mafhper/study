@@ -2,10 +2,9 @@
   "name": "101",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html src/js/main.js",
-    "build": "parcel build src/index.html src/js/main.js"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "@mafhper",

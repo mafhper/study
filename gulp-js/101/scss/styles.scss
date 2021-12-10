@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    $color-brand: hsl(199, 100%, 46%);
+    $color-primary: hsl(187, 100%, 42%);
+    $color-secondary: hsl(0, 0%, 98%);
+    $color-tertiary: hsl(0, 0%, 98%);
+    $color-bg: hsl(0, 0%, 98%);
+    $color-text: hsl(0, 0%, 13%);
+}
+body {
+    background: hsl(195, 53%, 12%);
+    color: hsl(253, 73%, 29%);
+    border: 1px solid green;
+    padding: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    background: hsl(115, 46%, 38%);
+    //position: relative;
+    border: 1px solid r
