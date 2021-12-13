@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BannanaSplity</string>
+    <string name="sa_da_de_dados">SAÍDA DE DADOS:</string>
+    <string name="entrada_de_dados">ENTRADA DE DADOS:</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="texto_a_ser_exibido">Texto a ser exibido</string>
+</resources>
