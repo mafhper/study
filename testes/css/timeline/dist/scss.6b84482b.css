@@ -1,0 +1,35 @@
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: red;
+}
+
+li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1em 20px;
+  background-color: indigo;
+}
+
+li:before {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  width: 3px;
+  top: 1px;
+  bottom: 0;
+  left: 6px;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  border-radius: 50%;
+  left: 0;
+  height: 15px;
+  width: 15px;
+}
+
+/*# sourceMappingURL=/scss.6b84482b.css.map */

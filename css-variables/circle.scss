@@ -1,0 +1,60 @@
+body {
+    /**
+     * Define the space between dots. You can also set a fixed value
+     * The default value is min: 10px or 0.6vw if greater
+     */
+    --dots-gap: max(10px, 0.6vw);
+    /*
+     * Set the size of the dots. The final size is the value set
+     * on this property. If you set 2px, then dots will be 4px (2x2px)
+     */
+    --dots-size: 2px;
+    /*
+     * Change the color of the dots
+     */  
+    --dots-color: hsl(125 100% 77%);    
+    /*
+     * The size of the ripples. Applied to all the circles, even the 
+     * not visible ones.
+     */
+    --ripples-size: 10vmin;
+    /*
+     * Change the opacity of alternated ripples.
+     */
+    --ripples-opacity: 20%;
+    /*
+     * Set the X origin of the ripples.
+     * You can use keywords or values.
+     */  
+    --epicenter-x: bottom;
+    /*
+     * Set the Y origin of the ripples.
+     * You can use keywords or values.
+     */    
+    --epicenter-y: center;
+    
+    /*
+     * Generate the grid by using background image/size.
+     */
+    background-image: radial-gradient(
+      var(--dots-color) var(--dots-size),
+      #0000 var(--dots-size)
+    );
+    background-size:
+      var(--dots-gap)
+      var(--dots-gap); 
+    
+    mask-image: 
+      repeating-radial-gradient(
+        circle at var(--epicenter-x) var(--epicenter-y),
+        rgba(0 0 0 / var(--ripples-opacity)) 0,
+        rgba(0 0 0 / var(--ripples-opacity)) var(--ripples-size),
+        black calc(var(--ripples-size) + 1.5px),
+        black calc(var(--ripples-size) * 2),
+        rgba(0 0 0 / var(--ripples-opacity)) calc((var(--ripples-size) * 2) + 1.5px)
+    );
+  }
+  
+  
+  
+  

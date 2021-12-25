@@ -1,0 +1,194 @@
+@font-face {
+    font-family: Sriracha;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local("Sriracha Regular "), local("Sriracha-Regular"), url(/_next/static/media/sriracha-latin-400.8405f968.woff2) format("woff2"), url(/_next/static/media/sriracha-latin-400.b30d4255.woff) format("woff")
+}
+
+.tippy-box[data-animation=fade][data-state=hidden] {
+    opacity: 0
+}
+
+.tippy-iOS {
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent
+}
+
+[data-tippy-root] {
+    max-width: calc(100vw - 10px)
+}
+
+.tippy-box {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    outline: 0;
+    transition-property: transform, visibility, opacity
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow {
+    bottom: 0
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+    bottom: -7px;
+    left: 0;
+    border-width: 8px 8px 0;
+    border-top-color: initial;
+    transform-origin: center top
+}
+
+.tippy-box[data-placement^=bottom]>.tippy-arrow {
+    top: 0
+}
+
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+    top: -7px;
+    left: 0;
+    border-width: 0 8px 8px;
+    border-bottom-color: initial;
+    transform-origin: center bottom
+}
+
+.tippy-box[data-placement^=left]>.tippy-arrow {
+    right: 0
+}
+
+.tippy-box[data-placement^=left]>.tippy-arrow:before {
+    border-width: 8px 0 8px 8px;
+    border-left-color: initial;
+    right: -7px;
+    transform-origin: center left
+}
+
+.tippy-box[data-placement^=right]>.tippy-arrow {
+    left: 0
+}
+
+.tippy-box[data-placement^=right]>.tippy-arrow:before {
+    left: -7px;
+    border-width: 8px 8px 8px 0;
+    border-right-color: initial;
+    transform-origin: center right
+}
+
+.tippy-box[data-inertia][data-state=visible] {
+    transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+}
+
+.tippy-arrow {
+    width: 16px;
+    height: 16px;
+    color: #333
+}
+
+.tippy-arrow:before {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-style: solid
+}
+
+.tippy-content {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 1
+}
+
+:root {
+    --reach-tabs: 1
+}
+
+[data-reach-tabs][data-orientation=vertical] {
+    display: flex
+}
+
+[data-reach-tab-list] {
+    display: flex;
+    background: rgba(0, 0, 0, .05)
+}
+
+[data-reach-tab-list][aria-orientation=vertical] {
+    flex-direction: column
+}
+
+[data-reach-tab] {
+    display: inline-block;
+    padding: .25em .5em;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none
+}
+
+[data-reach-tab]:active {
+    background: rgba(0, 0, 0, .05)
+}
+
+[data-reach-tab]:disabled {
+    opacity: .25;
+    cursor: default
+}
+
+[data-reach-tab][data-selected] {
+    border-bottom-color: currentColor
+}
+
+@font-face {
+    font-family: Wotfard;
+    src: local("Wotfard"), url(/fonts/wotfard/wotfard-semibold-webfont.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: Wotfard;
+    src: local("Wotfard"), url(/fonts/wotfard/wotfard-medium-webfont.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: Wotfard;
+    src: local("Wotfard"), url(/fonts/wotfard/wotfard-regular-webfont.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: League Mono;
+    src: url(/fonts/league-mono/LeagueMono-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: League Mono;
+    src: url(/fonts/league-mono/LeagueMono-SemiBold.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: League Mono;
+    src: url(/fonts/league-mono/LeagueMono-Bold.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback
+}
+
+/*# sourceMappingURL=dfc065bee25266da.css.map*/
