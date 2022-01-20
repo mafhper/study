@@ -1,0 +1,21 @@
+main.svelte-1x358o3 {
+  text-align: center;
+  padding: 1em;
+  max-width: 240px;
+  margin: 0 auto;
+}
+h1.svelte-1x358o3 {
+  background: -webkit-linear-gradient(rgb(149, 0, 194), rgb(14, 202, 29));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 10em;
+  font-weight: 800;
+  text-shadow: #ccc 5em 0 5em;
+}
+@media (min-width: 640px) {
+  main.svelte-1x358o3 {
+    max-width: none;
+  }
+}

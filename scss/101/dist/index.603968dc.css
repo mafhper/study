@@ -1,0 +1,716 @@
+@charset "UTF-8";
+/* ================================================================= 
+ * ress.css • v4.0.0
+ * MIT License
+ * github.com/filipelinhares/ress
+ * =================================================================
+ *
+ * Global selectors
+ * ================================================================= 
+ * 
+ */
+html {
+  block-size: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+textarea,
+input {
+  font: inherit;
+}
+
+button,
+select,
+textarea,
+input {
+  font-size: max(16px, 1em);
+}
+
+/* =================================================================  
+ * General elements
+ * ================================================================= 
+ * 
+ */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+  color: inherit;
+  /* Correct border color in Firefox. */
+}
+
+details {
+  display: block;
+  /* Render the `main` element consistently in IE. */
+  /* remove class main from details element */
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit;
+  /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0;
+  /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+/* =================================================================  
+ * Forms
+ * ================================================================= 
+ * 
+ */
+input {
+  border-radius: 0;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* =================================================================
+ * Specify media element style
+ * ================================================================= 
+ * 
+ */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* =================================================================  
+ * Accessibility
+ * ================================================================= 
+ * 
+ */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+:root {
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --neon: hsl(317, 100%, 54%);
+  --neon-bg: hsl(323, 21%, 16%);
+  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+/* =================================================================
+ * Definições globais de cores
+ * ================================================================= 
+ * 
+ */
+/* Variáveis de cores padrão */
+/* Definições das regras de cores */
+* {
+  /* Brand Default Color */
+  --brand-color: #ff270a;
+  --brand-hue: 7;
+  --brand-saturation: 100%;
+  --brand-lightness: 52%;
+  /* Brand Light Color */
+  --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+  --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+  --text2-light: hsl(var(--brand-hue) 30% 30%);
+  --surface1-light: hsl(var(--brand-hue) 25% 90%);
+  --surface2-light: hsl(var(--brand-hue) 20% 99%);
+  --surface3-light: hsl(var(--brand-hue) 20% 92%);
+  --surface4-light: hsl(var(--brand-hue) 20% 85%);
+  --surface-shadow-light: var(--brand-hue) 10% 20%;
+  --shadow-strength-light: 0.02;
+  /* Brand Dark Color */
+  --brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) / 2) calc(var(--brand-lightness) / 1.5));
+  --text1-dark: hsl(var(--brand-hue) 15% 85%);
+  --text2-dark: hsl(var(--brand-hue) 5% 65%);
+  --surface1-dark: hsl(var(--brand-hue) 10% 10%);
+  --surface2-dark: hsl(var(--brand-hue) 10% 15%);
+  --surface3-dark: hsl(var(--brand-hue) 5% 20%);
+  --surface4-dark: hsl(var(--brand-hue) 5% 25%);
+  --surface-shadow-dark: var(--brand-hue) 50% 3%;
+  --shadow-strength-dark: 0.8;
+  /* Brand Dim Color */
+  --brand-dim: hsl(var(--brand-hue) calc(var(--brand-saturation) / 1.25) calc(var(--brand-lightness) / 1.25));
+  --text1-dim: hsl(var(--brand-hue) 15% 75%);
+  --text2-dim: hsl(var(--brand-hue) 10% 61%);
+  --surface1-dim: hsl(var(--brand-hue) 10% 20%);
+  --surface2-dim: hsl(var(--brand-hue) 10% 25%);
+  --surface3-dim: hsl(var(--brand-hue) 5% 30%);
+  --surface4-dim: hsl(var(--brand-hue) 5% 35%);
+  --surface-shadow-dim: var(--brand-hue) 30% 13%;
+  --shadow-strength-dim: 0.2;
+}
+
+/* Definições de cores para o tema inicial */
+:root {
+  color-scheme: light;
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+  --surface3: var(--surface3-light);
+  --surface4: var(--surface4-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+}
+
+/* 
+/  O prefers-color-scheme CSS media feature é usado para detectar se 
+/  o usuário solicitou que o sistema use um tema de cores claras ou escuras. 
+/
+*/
+@media (prefers-color-scheme: dark) {
+  /* Definições de cores para o tema escuro no root */
+  :root {
+    color-scheme: dark;
+    --brand: var(--brand-dark);
+    --text1: var(--text1-dark);
+    --text2: var(--text2-dark);
+    --surface1: var(--surface1-dark);
+    --surface2: var(--surface2-dark);
+    --surface3: var(--surface3-dark);
+    --surface4: var(--surface4-dark);
+    --surface-shadow: var(--surface-shadow-dark);
+    --shadow-strength: var(--shadow-strength-dark);
+  }
+}
+/* Mapa de cores para o tema claro */
+[color-scheme=light] {
+  color-scheme: light;
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+  --surface3: var(--surface3-light);
+  --surface4: var(--surface4-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+}
+
+/* Mapa de cores para o tema escuro */
+[color-scheme=dark] {
+  color-scheme: dark;
+  --brand: var(--brand-dark);
+  --text1: var(--text1-dark);
+  --text2: var(--text2-dark);
+  --surface1: var(--surface1-dark);
+  --surface2: var(--surface2-dark);
+  --surface3: var(--surface3-dark);
+  --surface4: var(--surface4-dark);
+  --surface-shadow: var(--surface-shadow-dark);
+  --shadow-strength: var(--shadow-strength-dark);
+}
+
+/* Mapa de cores para o tema dim */
+[color-scheme=dim] {
+  color-scheme: dark;
+  --brand: var(--brand-dim);
+  --text1: var(--text1-dim);
+  --text2: var(--text2-dim);
+  --surface1: var(--surface1-dim);
+  --surface2: var(--surface2-dim);
+  --surface3: var(--surface3-dim);
+  --surface4: var(--surface4-dim);
+  --surface-shadow: var(--surface-shadow-dim);
+  --shadow-strength: var(--shadow-strength-dim);
+}
+
+/* =================================================================
+ * Definições de Fontes
+ * ================================================================= 
+ * 
+ */
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  --margin: 1.25rem;
+  --padding: 0.125rem;
+  margin: var(--margin);
+  padding: var(--padding);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  width: max-content;
+  position: relative;
+  background-color: var(--blue);
+}
+h6::after, .h6::after, h5::after, .h5::after, h4::after, .h4::after, h3::after, .h3::after, h2::after, .h2::after, h1::after, .h1::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--text1);
+}
+
+h1, .h1 {
+  font-size: clamp(1.375rem, 1vw + 1rem, 2.5rem);
+}
+
+h2, .h2 {
+  font-size: clamp(1.375rem, 1vw + 1rem, 2rem);
+}
+
+h3, .h3 {
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+}
+
+h4, .h4 {
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+}
+
+h5, .h5 {
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.375rem);
+}
+
+h6, .h6 {
+  font-size: clamp(1rem, 1vw + 1rem, 1.25rem);
+}
+
+p {
+  font-size: clamp(1rem, 1vw + 1rem, 1.125rem);
+}
+
+/* =================================================================
+ * Definições globais de sombras
+ * ================================================================= 
+ * 
+ */
+div .surface:hover,
+div .surface:focus {
+  border: 1px solid hsl(var(--brand-hue), 10%, 50%, 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 6.7px 5.3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.01)), 0 12.5px 10px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 22.3px 17.9px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.02)), 0 41.8px 33.4px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.03)), 0 100px 80px hsl(var(--surface-shadow)/var(--shadow-strength));
+  transition: ease-in-out 0.2s;
+}
+
+.rad-shadow {
+  border: 1px solid hsl(var(--brand-hue), 10%, 80%, 80%);
+  box-shadow: 0 2rem 1.5rem 1.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.9)), 0 6.7px 5.3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.1)), 0 100px 80px hsl(var(--surface-shadow)/var(--shadow-strength));
+  transition: ease-in-out 0.2s;
+}
+
+/* =================================================================
+ * Definições globais de listas
+ * ================================================================= 
+ * 
+ */
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 3em;
+}
+
+/* =================================================================
+ * Definições Personalizadas de Campos de Entrada
+ * ================================================================= 
+ * 
+ */
+input {
+  /* accent-color: var(--yellow); */
+}
+
+input[type=color] {
+  -webkit-appearance: none;
+  outline: 5px solid var(--surface2);
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+
+input[type=radio] {
+  background-color: var(--surface1);
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.8), 0 0 0 1px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 2px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.6)), 0 4px 3px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.4)), 0 6px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2)), 0 10px 6px hsl(var(--surface-shadow)/calc(var(--shadow-strength) + 0.2));
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin-right: 15px;
+  position: relative;
+  width: 15px;
+  -webkit-appearance: none;
+}
+
+input[type=radio]:after {
+  background-color: var(--dark);
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.8);
+  content: "";
+  display: block;
+  height: 7px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 7px;
+}
+
+input[type=radio]:checked:after {
+  background-color: var(--light);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(255, 255, 255, 0.4), 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 2px 2px rgba(232, 125, 125, 0.4);
+}
+
+/* =================================================================
+ * Definições Personalizadas de Label
+ * ================================================================= 
+ * 
+ */
+label {
+  padding: 2rem;
+}
+
+/* =================================================================
+ * Definições para Containers
+ * ================================================================= 
+ * 
+ */
+.container {
+  padding: 2rem 1rem 4rem 1rem;
+}
+
+/* =================================================================
+ * Definições Customizadas
+ * ================================================================= 
+ * 
+ */
+html {
+  background-color: var(--surface1);
+  color: var(--text1);
+}
+
+body {
+  font-family: var(--font-sans-serif);
+}
+
+#text-brand {
+  color: var(--brand);
+}
+
+.brand {
+  color: var(--text1);
+  background-color: var(--brand);
+}
+
+.surface1 {
+  background-color: var(--surface1);
+  color: var(--text2);
+}
+
+.surface2 {
+  background-color: var(--surface2);
+  color: var(--text2);
+}
+
+.surface3 {
+  background-color: var(--surface3);
+  color: var(--text1);
+}
+
+.surface4 {
+  background-color: var(--surface4);
+  color: var(--text1);
+}
+
+.text1 {
+  color: var(--text1);
+}
+
+.text2 {
+  color: var(--text2);
+}
+/*# sourceMappingURL=index.603968dc.css.map */

@@ -1,0 +1,16 @@
+{
+  "name": "css-flex-grid",
+  "version": "6.6.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "gitignore": "^0.7.0"
+  }
+}

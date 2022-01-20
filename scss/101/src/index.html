@@ -9,7 +9,8 @@
   <meta name="theme-color" content="#ff270a">
   <meta name="description" content="🙂">
   <title>Hello World!</title>
-  <link rel="stylesheet" href="scss/main.scss">
+  <link rel="stylesheet" href="./scss/main.scss">
+  
 </head>
 
 <body>
@@ -102,7 +103,7 @@
     </div>
     </div>
 </main>
-<script type="async" src="js/main.js"></script>
+<script type="module" src="./js/main.js"></script>
 <script>
   function getColor() {
     let input = document.querySelector('input[type=color]')
@@ -145,6 +146,7 @@
     h = Math.round(360 * h);
     return { h, s, l };
   }
+  console.log('Hello from index.html')
 </script>
 </body>
 
